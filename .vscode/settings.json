@@ -1,0 +1,17 @@
+{
+    "dbt.queryLimit": 500,
+    "dbt.enableNewLineagePanel": true,
+    "files.associations": {
+        "**/jax-analytics/**/*.yaml": "jinja-yaml",
+        "**/jax-analytics/**/*.yml": "jinja-yaml",
+        "**/jax-analytics/**/*.sql": "jinja-sql",
+        "**/jax-analytics/**/docs/**/*.md": "jinja-md"
+    },
+    "dbt.dbtPythonPathOverride": "/Users/lechien/code/jax-analytics/.venv/bin/python",
+    "dbt.deferConfigPerProject": {
+        "": {
+            "favorState": true,
+            "deferToProduction": true
+        }
+    }
+}

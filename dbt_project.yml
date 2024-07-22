@@ -1,0 +1,69 @@
+name: "jax_analytics"
+config-version: 2
+
+require-dbt-version: ">=1.6.0"
+profile: "jaxtina_on_cloud"
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  jax_analytics:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      sales:
+        +schema: sales
+    utilities:
+      +materialized: view
+  fb:
+    marts:
+      +schema: marketing
+      +materialized: table
+      dim_fb__posts:
+          +enabled: false
+      fct_fb__page_impressions_by_age_gender:
+        +enabled: false
+      fct_fb__page_impressions_by_city:
+        +enabled: false
+      fct_fb__page_insights:
+        +enabled: false
+      fct_fb__post_insights:
+        +enabled: false
+      fct_fb__video_retention:
+        +enabled: false
+      fct_fb__video_view_time_by_age_gender:
+        +enabled: false
+      fct_fb__video_view_time_by_city:
+        +enabled: false
+      
+    staging:
+      +materialized: view
+      stg_fb__page_insights:
+        +enabled: false
+      stg_fb__post_insights:
+        +enabled: false
+      stg_fb__pages:
+        +enabled: false
+      stg_fb__page_posts:
+        +enabled: false
+
+vars:
+  "dbt_date.time_zone": "Asia/Saigon"
+  fb:
+    source_dataset: Facebook
+    lookback_period: 7
+    is_interactive_actions_enabled: true
+    is_ecommerce_actions_enabled: true
+    json_transform_schema: analytics
+    additional_ad_interact_actions:
+      - onsite_conversion.messaging_conversation_started_7d

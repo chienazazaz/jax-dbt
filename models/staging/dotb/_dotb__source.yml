@@ -1,0 +1,35 @@
+sources:
+  - name: dotb
+    schema: dotb_crm
+    tables:
+      - name: contacts__payment
+        identifier: contacts_j_payment_1_c
+      - name: contacts
+        identifier: contacts
+      - name: payments
+        identifier: j_payment
+      - name: payment_details
+        identifier: j_paymentdetail
+      - name: payment__discount
+        identifier: j_payment_j_discount_1_c
+      - name: payment__payment
+        identifier: j_payment_j_payment_1_c
+      - name: payment__payment_2
+        identifier: j_payment_j_payment_2_c
+      - name: teams
+        identifier: teams
+      - name: users
+        identifier: users
+      - name: leads
+        identifier: leads
+      - name: gradebook
+        identifier: j_gradebook
+      - name: gradebook_details
+        identifier: j_gradebookdetail
+      - name: classes
+        identifier: j_class
+      - name: kind_of_course
+        identifier: j_kindofcourse
+      - name: course
+        identifier: j_coursefee
+
