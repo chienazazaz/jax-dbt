@@ -1,5 +1,6 @@
 {{ config(
-    tags = ['ggads','fact','table']
+    materialized='view',
+    tags = ['ggads','fact','view']
 ) }}
 
 WITH ad_group_stats AS (

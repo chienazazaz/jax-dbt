@@ -1,0 +1,38 @@
+name: Validate Pull Request
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+
+      - id: authenticate
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY}}
+          export_environment_variables: true
+          create_credentials_file: true
+
+      - run: |
+          pip install -r requirements.txt
+          dbt deps
+      - name: Pull request run
+        id: pull_request_flow
+        if: github.event_name == 'pull_request'
+        run: |
+          dbt run --profiles-dir $PWD --project-dir $PWD --select state:modified --defer --state prod --target dev -x
+      - name: Pull request test
+        id: pull_request_test
+        if: github.event_name == 'pull_request'
+        run: |
+          dbt test --profiles-dir $PWD --project-dir $PWD --select state:modified --defer --state prod --target dev -x

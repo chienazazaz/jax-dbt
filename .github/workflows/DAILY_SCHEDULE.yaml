@@ -1,0 +1,36 @@
+name: Daily schedule
+
+on:
+  schedule:
+    - cron: "30 18 * * *"
+  workflow_dispatch:
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+
+      - id: authenticate
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY}}
+          export_environment_variables: true
+          create_credentials_file: true
+
+      - run: |
+          pip install -r requirements.txt
+          dbt deps
+
+      - name: Schedule flow daily
+        run: |
+          dbt run --profiles-dir $PWD --project-dir $PWD --exclude config.materialized:view config.tags:inactive --select config.tags:fact,config.materialized:incremental,config.tags:daily
+          dbt run --profiles-dir $PWD --project-dir $PWD --exclude config.materialized:view config.tags:inactive --select config.tags:dimension,config.materialized:table
+          dbt run --profiles-dir $PWD --project-dir $PWD --exclude config.materialized:view config.tags:inactive --select fb
+
+     

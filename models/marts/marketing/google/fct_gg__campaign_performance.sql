@@ -1,5 +1,6 @@
 {{ config(
-    tags = ['ggads','fact','table']
+    materialized='view',
+    tags = ['ggads','fact','view']
 ) }}
 
 WITH campaign_stats AS (

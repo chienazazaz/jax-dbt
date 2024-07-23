@@ -1,0 +1,34 @@
+name: Hourly Schedule
+
+on:
+  schedule:
+    - cron: "15 1-23/2 * * *"
+  workflow_dispatch:
+concurrency: ${{ github.ref }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.9
+
+      - id: authenticate
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY}}
+          export_environment_variables: true
+          create_credentials_file: true
+
+      - run: |
+          pip install -r requirements.txt
+          dbt deps
+
+      - name: Schedule flow at every 2 hours
+        id: schedule_flow_2h
+        run: |
+          dbt run --profiles-dir $PWD --project-dir $PWD --exclude ga4 config.materialized:view config.tags:daily config.tags:inactive --select config.tags:fact config.tags:incremental config.tags:dashboard
+          dbt snapshot --profiles-dir $PWD --project-dir $PWD
