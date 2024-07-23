@@ -1,0 +1,292 @@
+version: 2
+
+sources:
+  - name: googleads
+    description: "Google Ads data export"
+    schema: Google
+    tables:
+      - name: account_conversion_stats
+        identifier: "ads_AccountConversionStats_{{var('google_ad_id')}}"
+        
+      - name: keyword_cross_device_stats
+        identifier: "ads_KeywordCrossDeviceStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_account_stats
+        identifier: "ads_HourlyAccountStats_{{var('google_ad_id')}}"
+        
+      - name: gender
+        identifier: "ads_Gender_{{var('google_ad_id')}}"
+        
+      - name: ad_conversion_stats
+        identifier: "ads_AdConversionStats_{{var('google_ad_id')}}"
+        
+      - name: search_query_conversion_stats
+        identifier: "ads_SearchQueryConversionStats_{{var('google_ad_id')}}"
+        
+      - name: video_non_click_stats
+        identifier: "ads_VideoNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_conversion_stats
+        identifier: "ads_AdGroupConversionStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_campaign_stats
+        identifier: "ads_HourlyCampaignStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_cross_device_stats
+        identifier: "ads_CampaignCrossDeviceStats_{{var('google_ad_id')}}"
+        
+      - name: gender_non_click_stats
+        identifier: "ads_GenderNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: video
+        identifier: "ads_Video_{{var('google_ad_id')}}"
+        
+      - name: video_basic_stats
+        identifier: "ads_VideoBasicStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_audience_non_click_stats
+        identifier: "ads_CampaignAudienceNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_account_conversion_stats
+        identifier: "ads_HourlyAccountConversionStats_{{var('google_ad_id')}}"
+        
+      - name: video_conversion_stats
+        identifier: "ads_VideoConversionStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_audience
+        identifier: "ads_AdGroupAudience_{{var('google_ad_id')}}"
+        
+      - name: age_range_non_click_stats
+        identifier: "ads_AgeRangeNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: account_non_click_stats
+        identifier: "ads_AccountNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: parental_status_basic_stats
+        identifier: "ads_ParentalStatusBasicStats_{{var('google_ad_id')}}"
+        
+      - name: ad_stats
+        identifier: "ads_AdStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_ad_group_conversion_stats
+        identifier: "ads_HourlyAdGroupConversionStats_{{var('google_ad_id')}}"
+        
+      - name: parental_status_stats
+        identifier: "ads_ParentalStatusStats_{{var('google_ad_id')}}"
+        
+      - name: bid_goal
+        identifier: "ads_BidGoal_{{var('google_ad_id')}}"
+        
+      - name: ad_cross_device_stats
+        identifier: "ads_AdCrossDeviceStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_ad_label
+        identifier: "ads_AdGroupAdLabel_{{var('google_ad_id')}}"
+        
+      - name: ad_group_audience_conversion_stats
+        identifier: "ads_AdGroupAudienceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: search_query_stats
+        identifier: "ads_SearchQueryStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_cross_device_conversion_stats
+        identifier: "ads_AdGroupCrossDeviceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: budget
+        identifier: "ads_Budget_{{var('google_ad_id')}}"
+        
+      - name: bid_goal_conversion_stats
+        identifier: "ads_BidGoalConversionStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_cross_device_stats
+        identifier: "ads_AdGroupCrossDeviceStats_{{var('google_ad_id')}}"
+        
+      - name: age_range_stats
+        identifier: "ads_AgeRangeStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_audience
+        identifier: "ads_CampaignAudience_{{var('google_ad_id')}}"
+        
+      - name: keyword_cross_device_conversion_stats
+        identifier: "ads_KeywordCrossDeviceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: campaign
+        identifier: "ads_Campaign_{{var('google_ad_id')}}"
+        
+      - name: ad_cross_device_conversion_stats
+        identifier: "ads_AdCrossDeviceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: placement_basic_stats
+        identifier: "ads_PlacementBasicStats_{{var('google_ad_id')}}"
+        
+      - name: age_range_basic_stats
+        identifier: "ads_AgeRangeBasicStats_{{var('google_ad_id')}}"
+        
+      - name: keyword_basic_stats
+        identifier: "ads_KeywordBasicStats_{{var('google_ad_id')}}"
+        
+      - name: parental_status_non_click_stats
+        identifier: "ads_ParentalStatusNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: gender_conversion_stats
+        identifier: "ads_GenderConversionStats_{{var('google_ad_id')}}"
+        
+      - name: placement_stats
+        identifier: "ads_PlacementStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group
+        identifier: "ads_AdGroup_{{var('google_ad_id')}}"
+        
+      - name: ad_basic_stats
+        identifier: "ads_AdBasicStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_audience_stats
+        identifier: "ads_AdGroupAudienceStats_{{var('google_ad_id')}}"
+        
+      - name: placement_conversion_stats
+        identifier: "ads_PlacementConversionStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_stats
+        identifier: "ads_AdGroupStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_conversion_stats
+        identifier: "ads_CampaignConversionStats_{{var('google_ad_id')}}"
+        
+      - name: budget_stats
+        identifier: "ads_BudgetStats_{{var('google_ad_id')}}"
+        
+      - name: account_basic_stats
+        identifier: "ads_AccountBasicStats_{{var('google_ad_id')}}"
+        
+      - name: customer
+        identifier: "ads_Customer_{{var('google_ad_id')}}"
+        
+      - name: campaign_label
+        identifier: "ads_CampaignLabel_{{var('google_ad_id')}}"
+        
+      - name: age_range_conversion_stats
+        identifier: "ads_AgeRangeConversionStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_audience_basic_stats
+        identifier: "ads_CampaignAudienceBasicStats_{{var('google_ad_id')}}"
+        
+      - name: keyword_stats
+        identifier: "ads_KeywordStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_ad_group_stats
+        identifier: "ads_HourlyAdGroupStats_{{var('google_ad_id')}}"
+        
+      - name: placement
+        identifier: "ads_Placement_{{var('google_ad_id')}}"
+        
+      - name: video_stats
+        identifier: "ads_VideoStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_basic_stats
+        identifier: "ads_CampaignBasicStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_label
+        identifier: "ads_AdGroupLabel_{{var('google_ad_id')}}"
+        
+      - name: parental_status_conversion_stats
+        identifier: "ads_ParentalStatusConversionStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_stats
+        identifier: "ads_CampaignStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_audience_conversion_stats
+        identifier: "ads_CampaignAudienceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_criterion
+        identifier: "ads_CampaignCriterion_{{var('google_ad_id')}}"
+        
+      - name: hourly_bid_goal_stats
+        identifier: "ads_HourlyBidGoalStats_{{var('google_ad_id')}}"
+        
+      - name: click_stats
+        identifier: "ads_ClickStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_audience_stats
+        identifier: "ads_CampaignAudienceStats_{{var('google_ad_id')}}"
+        
+      - name: parental_status
+        identifier: "ads_ParentalStatus_{{var('google_ad_id')}}"
+        
+      - name: geo_stats
+        identifier: "ads_GeoStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_criterion_label
+        identifier: "ads_AdGroupCriterionLabel_{{var('google_ad_id')}}"
+        
+      - name: age_range
+        identifier: "ads_AgeRange_{{var('google_ad_id')}}"
+        
+      - name: geo_conversion_stats
+        identifier: "ads_GeoConversionStats_{{var('google_ad_id')}}"
+        
+      - name: hourly_campaign_conversion_stats
+        identifier: "ads_HourlyCampaignConversionStats_{{var('google_ad_id')}}"
+        
+      - name: keyword
+        identifier: "ads_Keyword_{{var('google_ad_id')}}"
+        
+      - name: campaign_cookie_stats
+        identifier: "ads_CampaignCookieStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_audience_basic_stats
+        identifier: "ads_AdGroupAudienceBasicStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_criterion
+        identifier: "ads_AdGroupCriterion_{{var('google_ad_id')}}"
+        
+      - name: paid_organic_stats
+        identifier: "ads_PaidOrganicStats_{{var('google_ad_id')}}"
+        
+      - name: location_based_campaign_criterion
+        identifier: "ads_LocationBasedCampaignCriterion_{{var('google_ad_id')}}"
+        
+      - name: gender_stats
+        identifier: "ads_GenderStats_{{var('google_ad_id')}}"
+        
+      - name: account_stats
+        identifier: "ads_AccountStats_{{var('google_ad_id')}}"
+        
+      - name: shopping_product_conversion_stats
+        identifier: "ads_ShoppingProductConversionStats_{{var('google_ad_id')}}"
+        
+      - name: campaign_cross_device_conversion_stats
+        identifier: "ads_CampaignCrossDeviceConversionStats_{{var('google_ad_id')}}"
+        
+      - name: product_group_stats
+        identifier: "ads_ProductGroupStats_{{var('google_ad_id')}}"
+        
+      - name: gender_basic_stats
+        identifier: "ads_GenderBasicStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_bid_modifier
+        identifier: "ads_AdGroupBidModifier_{{var('google_ad_id')}}"
+        
+      - name: campaign_location_target_stats
+        identifier: "ads_CampaignLocationTargetStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_basic_stats
+        identifier: "ads_AdGroupBasicStats_{{var('google_ad_id')}}"
+        
+      - name: keyword_conversion_stats
+        identifier: "ads_KeywordConversionStats_{{var('google_ad_id')}}"
+        
+      - name: shopping_product_stats
+        identifier: "ads_ShoppingProductStats_{{var('google_ad_id')}}"
+        
+      - name: placement_non_click_stats
+        identifier: "ads_PlacementNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: bid_goal_stats
+        identifier: "ads_BidGoalStats_{{var('google_ad_id')}}"
+        
+      - name: ad_group_audience_non_click_stats
+        identifier: "ads_AdGroupAudienceNonClickStats_{{var('google_ad_id')}}"
+        
+      - name: ad
+        identifier: "ads_Ad_{{var('google_ad_id')}}"
+        

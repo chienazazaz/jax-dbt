@@ -23,6 +23,8 @@ models:
       +materialized: table
       sales:
         +schema: sales
+      marketing:
+        +schema: marketing
     utilities:
       +materialized: view
   fb:
@@ -59,6 +61,7 @@ models:
 
 vars:
   "dbt_date.time_zone": "Asia/Saigon"
+  google_ad_id: 4564570672
   fb:
     source_dataset: Facebook
     lookback_period: 7
