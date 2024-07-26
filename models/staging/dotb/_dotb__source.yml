@@ -32,4 +32,8 @@ sources:
         identifier: j_kindofcourse
       - name: course
         identifier: j_coursefee
+      - name: attendance
+        identifier: c_attendance
+      - name: tasks
+        identifier: tasks
 
