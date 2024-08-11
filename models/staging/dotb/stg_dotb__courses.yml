@@ -1,0 +1,39 @@
+models:
+  - name: stg_dotb__courses
+    columns:
+      - name: course_id
+        data_type: string
+        quote: true
+      - name: center_id
+        data_type: string
+        quote: true
+      - name: kind_of_course
+        data_type: string
+        quote: true
+      - name: type_of_course_fee
+        data_type: string
+        quote: true
+      - name: unit_price
+        data_type: string
+        quote: true
+      - name: course_type
+        data_type: string
+        quote: true
+      - name: course_name
+        data_type: string
+        quote: true
+      - name: duration_exp
+        data_type: string
+        quote: true
+      - name: description
+        data_type: string
+        quote: true
+      - name: ext_unit
+        data_type: string
+        quote: true
+      - name: ext_name
+        data_type: string
+        quote: true
+      - name: updated_at
+        data_type: timestamp
+        quote: true

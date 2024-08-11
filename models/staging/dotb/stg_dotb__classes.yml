@@ -1,0 +1,54 @@
+models:
+  - name: stg_dotb__classes
+    columns:
+      - name: class_id
+        data_type: string
+        quote: true
+        tests:
+          - unique
+      - name: center_id
+        data_type: string
+        quote: true
+        tests:
+          - not_null 
+      - name: teacher_id
+        data_type: string
+        quote: true
+        tests:
+          - not_null
+      - name: class_code
+        data_type: string
+        quote: true
+      - name: class_type
+        data_type: string
+        quote: true
+      - name: class_name
+        data_type: string
+        quote: true
+      - name: class_status
+        data_type: string
+        quote: true
+      - name: hours
+        data_type: string
+        quote: true
+      - name: start_date
+        data_type: date
+        quote: true
+      - name: end_date
+        data_type: date
+        quote: true
+      - name: kind_of_course
+        data_type: string
+        quote: true
+      - name: level
+        data_type: string
+        quote: true
+      - name: max_students
+        data_type: string
+        quote: true
+      - name: created_at
+        data_type: timestamp
+        quote: true
+      - name: updated_at
+        data_type: timestamp
+        quote: true

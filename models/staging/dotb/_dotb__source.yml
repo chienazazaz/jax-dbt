@@ -1,6 +1,6 @@
 sources:
   - name: dotb
-    schema: dotb_crm
+    schema: DOTB_CRM
     tables:
       - name: contacts__payment
         identifier: contacts_j_payment_1_c
@@ -30,10 +30,47 @@ sources:
         identifier: j_class
       - name: kind_of_course
         identifier: j_kindofcourse
-      - name: course
+      - name: courses
         identifier: j_coursefee
-      - name: attendance
-        identifier: c_attendance
+      - name: attendence
+        identifier: c_attendence
       - name: tasks
         identifier: tasks
-
+      - name: leads_audit
+      - name: c_teachers
+        identifier: teachers
+      - name: gradebook_config
+        identifier: j_gradebookconfig
+      - name: student_situations
+        identifier: j_studentsituations
+      - name: class_gradebook
+        identifier: j_class_j_gradebook_1_c
+      - name: class_teachers
+        identifier: j_class_c_teachers_1_c
+      - name: class_tasks
+        identifier: j_class_tasks_1_c
+      - name: teacher_gradebook
+        identifier: c_teachers_j_gradebook_1_c
+      - name: class_class
+        identifier: j_class_j_class_1_c
+      - name: gradebook_contacts
+        identifier: j_gradebook_contacts_1_c
+      - name: j_teacherqe
+        identifier: teacherqe
+      - name: teacherqe_teachers
+        identifier: j_teacherqe_c_teachers_c
+      - name: teacherqe_class
+        identifier: j_teacherqe_j_class_c
+      - name: meetings
+      - name: course_payment
+        identifier: j_coursefee_j_payment_1_c
+      - name: course_class
+        identifier: j_coursefee_j_class_1_c
+      - name: course_kindofcourse
+        identifier: j_coursefee_j_kindofcourse_1_c
+      - name: course_payment_2
+        identifier: j_coursefee_j_payment_2_c
+      - name: payment_payment
+        identifier: j_payment_j_payment_1_c
+      - name: payment_payment_2
+        identifier: j_payment_j_payment_2_c

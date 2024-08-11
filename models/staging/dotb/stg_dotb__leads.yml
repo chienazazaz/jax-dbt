@@ -1,0 +1,138 @@
+models:
+  - name: stg_dotb__leads
+    columns:
+      - name: assigned_user_id
+        data_type: string
+        quote: true
+      - name: dob
+        data_type: date
+        quote: true
+      - name: channel
+        data_type: string
+        quote: true
+      - name: contact_id
+        data_type: string
+        quote: true
+      - name: converted
+        data_type: string
+        quote: true
+      - name: created_by
+        data_type: string
+        quote: true
+      - name: created_at
+        data_type: timestamp
+        quote: true
+      - name: updated_at
+        data_type: timestamp
+        quote: true
+      - name: last_handover_date
+        data_type: string
+        quote: true
+      - name: description
+        data_type: string
+        quote: true
+      - name: dp_consent_last_updated
+        data_type: timestamp
+        quote: true
+      - name: eng_level
+        data_type: string
+        quote: true
+      - name: first_call_date
+        data_type: date
+        quote: true
+      - name: first_call_result
+        data_type: string
+        quote: true
+      - name: full_lead_name
+        data_type: string
+        quote: true
+      - name: gender
+        data_type: string
+        quote: true
+      - name: guardian_name
+        data_type: string
+        quote: true
+      - name: lead_id
+        data_type: string
+        quote: true
+      - name: last_call_date
+        data_type: string
+        quote: true
+      - name: last_call_result
+        data_type: string
+        quote: true
+      - name: last_call_status
+        data_type: string
+        quote: true
+      - name: last_pt_date
+        data_type: string
+        quote: true
+      - name: last_pt_status
+        data_type: string
+        quote: true
+      - name: lead_source
+        data_type: string
+        quote: true
+      - name: modified_user_id
+        data_type: string
+        quote: true
+      - name: lead_segment_group
+        data_type: string
+        quote: true
+      - name: other_mobile
+        data_type: string
+        quote: true
+      - name: last_handover_user_id
+        data_type: string
+        quote: true
+      - name: phone_guardian
+        data_type: string
+        quote: true
+      - name: phone_mobile
+        data_type: string
+        quote: true
+      - name: potential
+        data_type: string
+        quote: true
+      - name: prefer_level
+        data_type: string
+        quote: true
+      - name: primary_address_city
+        data_type: string
+        quote: true
+      - name: primary_address_country
+        data_type: string
+        quote: true
+      - name: primary_address_state
+        data_type: string
+        quote: true
+      - name: primary_address_street
+        data_type: string
+        quote: true
+      - name: school_id
+        data_type: string
+        quote: true
+      - name: source_description
+        data_type: string
+        quote: true
+      - name: status
+        data_type: string
+        quote: true
+      - name: target
+        data_type: string
+        quote: true
+      - name: center_id
+        data_type: string
+        quote: true
+      - name: utm_agent_id
+        data_type: string
+        quote: true
+      - name: utm_content
+        data_type: string
+        quote: true
+      - name: utm_medium
+        data_type: string
+        quote: true
+      - name: utm_source
+        data_type: string
+        quote: true

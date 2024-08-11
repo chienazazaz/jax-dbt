@@ -1,3 +1,9 @@
+{{
+  config(
+    enabled=false
+    )
+}}
+
 select 
     id as koc_id,
     c.name as koc_name,

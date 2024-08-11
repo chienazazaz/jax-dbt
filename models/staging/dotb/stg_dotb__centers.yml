@@ -1,0 +1,24 @@
+models:
+  - name: stg_dotb__centers
+    columns:
+      - name: center_id
+        data_type: string
+        quote: true
+      - name: center_name
+        data_type: string
+        quote: true
+      - name: legal_name
+        data_type: string
+        quote: true
+      - name: code_prefix
+        data_type: string
+        quote: true
+      - name: is_deleted
+        data_type: string
+        quote: true
+      - name: created_at
+        data_type: timestamp
+        quote: true
+      - name: updated_at
+        data_type: timestamp
+        quote: true
