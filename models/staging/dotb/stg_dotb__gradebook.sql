@@ -10,6 +10,8 @@ with source_gradebook as (
     json_value(g.data, '$.status') as gradebook_status,
     json_value(g.data, '$.type') as gradebook_type,
     json_value(g.data, '$.type2') as gradebook_type2,
+    json_value(g.data, '$.date_exam') as date_exam,
+    json_value(g.data, '$.grade_config') as grade_config,
     from {{ source('dotb', 'gradebook') }} g
     where json_value(g.data, '$.deleted') = '0'
 ),
@@ -32,6 +34,7 @@ select
     json_value(gd.data, '$.student_id') as student_id,
     json_value(gd.data, '$.teacher_id') as teacher_id,
     json_value(gd.data, '$.team_id') as center_id,
+    json_value(gd.data, '$.content') as detail_result,
     json_value(gd.data, '$.final_result') as final_result,
     json_value(gd.data, '$.description') as description,
 from {{ source('dotb', 'gradebook_details') }} gd
@@ -79,7 +82,10 @@ g.gradebook_status,
 g.gradebook_type,
 g.gradebook_type2,
 tg.teacher_id,
+g.gradebook_name,
+gd.detail_result,
+g.grade_config,
 from gradebook g 
 inner join gradebook_detail gd on gd.gradebook_id = g.gradebook_id
 left join teacher_gradebook tg on tg.gradebook_id = g.gradebook_id
-where g.gradebook_status='Approved'
+{# where g.gradebook_status='Approved' #}
