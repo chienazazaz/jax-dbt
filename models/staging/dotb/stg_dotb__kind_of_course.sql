@@ -1,8 +1,8 @@
-{{
+{# {{
   config(
-    enabled=false
+    
     )
-}}
+}} #}
 
 select 
     id as koc_id,

@@ -1,0 +1,304 @@
+version: 2
+models:
+  - name: stg_dotb__meetings
+    columns:
+      - name: assigned_user_id
+        data_type: string
+        quote: true
+      - name: attendance_status
+        data_type: int64
+        quote: true
+      - name: attended
+        data_type: int64
+        quote: true
+      - name: avg_attendance
+        data_type: string
+        quote: true
+      - name: cancel_by
+        data_type: string
+        quote: true
+      - name: cancel_date
+        data_type: timestamp
+        quote: true
+      - name: cancel_reason
+        data_type: string
+        quote: true
+      - name: classin_record_link
+        data_type: string
+        quote: true
+      - name: created_by
+        data_type: string
+        quote: true
+      - name: creator
+        data_type: string
+        quote: true
+      - name: customer_journey_blocked_by
+        data_type: string
+        quote: true
+      - name: customer_journey_points
+        data_type: string
+        quote: true
+      - name: customer_journey_progress
+        data_type: int64
+        quote: true
+      - name: customer_journey_score
+        data_type: string
+        quote: true
+      - name: date
+        data_type: timestamp
+        quote: true
+      - name: date_end
+        data_type: timestamp
+        quote: true
+      - name: date_entered
+        data_type: timestamp
+        quote: true
+      - name: date_modified
+        data_type: timestamp
+        quote: true
+      - name: date_start
+        data_type: timestamp
+        quote: true
+      - name: delivery_hour
+        data_type: float64
+        quote: true
+      - name: description
+        data_type: string
+        quote: true
+      - name: displayed_url
+        data_type: string
+        quote: true
+      - name: duration_cal
+        data_type: float64
+        quote: true
+      - name: duration_hours
+        data_type: int64
+        quote: true
+      - name: duration_minutes
+        data_type: int64
+        quote: true
+      - name: email_reminder_sent
+        data_type: int64
+        quote: true
+      - name: email_reminder_time
+        data_type: int64
+        quote: true
+      - name: external_id
+        data_type: string
+        quote: true
+      - name: first_duration
+        data_type: string
+        quote: true
+      - name: first_time
+        data_type: string
+        quote: true
+      - name: homework
+        data_type: string
+        quote: true
+      - name: meeting_id
+        data_type: string
+        quote: true
+      - name: is_cj_parent_activity
+        data_type: int64
+        quote: true
+      - name: is_customer_journey_activity
+        data_type: int64
+        quote: true
+      - name: is_timesheet
+        data_type: int64
+        quote: true
+      - name: join_url
+        data_type: string
+        quote: true
+      - name: class_id
+        data_type: string
+        quote: true
+      - name: contract_id
+        data_type: string
+        quote: true
+      - name: late_time
+        data_type: string
+        quote: true
+      - name: late_time_ta1
+        data_type: string
+        quote: true
+      - name: late_time_ta2
+        data_type: string
+        quote: true
+      - name: lesson_number
+        data_type: string
+        quote: true
+      - name: location
+        data_type: string
+        quote: true
+      - name: lock_status
+        data_type: string
+        quote: true
+      - name: makeup_session_id
+        data_type: string
+        quote: true
+      - name: meeting_type
+        data_type: string
+        quote: true
+      - name: modified_user_id
+        data_type: string
+        quote: true
+      - name: name
+        data_type: string
+        quote: true
+      - name: objective_custom
+        data_type: string
+        quote: true
+      - name: observe_note
+        data_type: string
+        quote: true
+      - name: observe_score
+        data_type: string
+        quote: true
+      - name: onl_record_link
+        data_type: string
+        quote: true
+      - name: outlook_id
+        data_type: string
+        quote: true
+      - name: parent_id
+        data_type: string
+        quote: true
+      - name: parent_type
+        data_type: string
+        quote: true
+      - name: planned_absence
+        data_type: string
+        quote: true
+      - name: recurrence_id
+        data_type: string
+        quote: true
+      - name: recurring_source
+        data_type: string
+        quote: true
+      - name: reminder_time
+        data_type: int64
+        quote: true
+      - name: repeat_count
+        data_type: int64
+        quote: true
+      - name: repeat_days
+        data_type: string
+        quote: true
+      - name: repeat_dow
+        data_type: string
+        quote: true
+      - name: repeat_interval
+        data_type: int64
+        quote: true
+      - name: repeat_ordinal
+        data_type: string
+        quote: true
+      - name: repeat_parent_id
+        data_type: string
+        quote: true
+      - name: repeat_selector
+        data_type: string
+        quote: true
+      - name: repeat_type
+        data_type: string
+        quote: true
+      - name: repeat_unit
+        data_type: string
+        quote: true
+      - name: repeat_until
+        data_type: string
+        quote: true
+      - name: room_id
+        data_type: string
+        quote: true
+      - name: sequence
+        data_type: int64
+        quote: true
+      - name: session_status
+        data_type: string
+        quote: true
+      - name: sso_code
+        data_type: string
+        quote: true
+      - name: status
+        data_type: string
+        quote: true
+      - name: syllabus_activities
+        data_type: string
+        quote: true
+      - name: syllabus_custom
+        data_type: string
+        quote: true
+      - name: syllabus_default
+        data_type: string
+        quote: true
+      - name: syllabus_homework
+        data_type: string
+        quote: true
+      - name: syllabus_id
+        data_type: string
+        quote: true
+      - name: syllabus_objective
+        data_type: string
+        quote: true
+      - name: syllabus_topic
+        data_type: string
+        quote: true
+      - name: syllabus_type
+        data_type: string
+        quote: true
+      - name: sync_timesheet
+        data_type: int64
+        quote: true
+      - name: sub_teacher_id
+        data_type: string
+        quote: true
+      - name: teacher_cover_id
+        data_type: string
+        quote: true
+      - name: teacher_id
+        data_type: string
+        quote: true
+      - name: teaching_hour
+        data_type: float64
+        quote: true
+      - name: teaching_type
+        data_type: string
+        quote: true
+      - name: center_id
+        data_type: string
+        quote: true
+      - name: till_hour
+        data_type: float64
+        quote: true
+      - name: time_range
+        data_type: string
+        quote: true
+      - name: timesheet_id
+        data_type: string
+        quote: true
+      - name: topic_custom
+        data_type: string
+        quote: true
+      - name: total_absent
+        data_type: string
+        quote: true
+      - name: total_attended
+        data_type: string
+        quote: true
+      - name: total_sent
+        data_type: string
+        quote: true
+      - name: total_student
+        data_type: string
+        quote: true
+      - name: type
+        data_type: string
+        quote: true
+      - name: week_date
+        data_type: string
+        quote: true
+      - name: week_no
+        data_type: string
+        quote: true

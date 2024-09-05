@@ -32,8 +32,8 @@ sources:
         identifier: j_kindofcourse
       - name: courses
         identifier: j_coursefee
-      - name: attendence
-        identifier: c_attendence
+      - name: attendance
+        identifier: c_attendance
       - name: tasks
         identifier: tasks
       - name: leads_audit
@@ -74,3 +74,4 @@ sources:
         identifier: j_payment_j_payment_1_c
       - name: payment_payment_2
         identifier: j_payment_j_payment_2_c
+      - name: calls

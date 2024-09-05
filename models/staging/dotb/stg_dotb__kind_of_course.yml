@@ -1,4 +1,4 @@
 version: 2
 models:
-  - name: stg_dotb__leads_audit
+  - name: stg_dotb__kind_of_course
     columns: []

@@ -18,7 +18,7 @@ from {{ ref("stg_dotb__gradebook") }}
 left join unnest(analytics.json_transform(parse_json( detail_result))) as detail_result
 left join unnest(analytics.json_extract_value(grade_config)) grade_config
 where json_value(grade_config,'$.alias') = json_value(detail_result,'$.key')
-and safe_cast(json_value(detail_result,'$.value') as float64) is not null
+{# and safe_cast(json_value(detail_result,'$.value') as float64) is not null #}
 {# ) #}
 
 

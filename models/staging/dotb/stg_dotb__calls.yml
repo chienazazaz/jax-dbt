@@ -1,139 +1,136 @@
 version: 2
 models:
-  - name: stg_dotb__leads
+  - name: stg_dotb__calls
     columns:
       - name: assigned_user_id
         data_type: string
         quote: true
-      - name: dob
-        data_type: date
-        quote: true
-      - name: channel
+      - name: call_destination
         data_type: string
         quote: true
-      - name: contact_id
+      - name: call_duration
+        data_type: float64
+        quote: true
+      - name: call_recording
         data_type: string
         quote: true
-      - name: converted
+      - name: call_result
         data_type: string
         quote: true
-      - name: created_by
+      - name: call_status
         data_type: string
         quote: true
-      - name: created_at
+      - name: agent_id
+        data_type: string
+        quote: true
+      - name: customer_journey_blocked_by
+        data_type: string
+        quote: true
+      - name: customer_journey_points
+        data_type: string
+        quote: true
+      - name: customer_journey_progress
+        data_type: string
+        quote: true
+      - name: customer_journey_score
+        data_type: string
+        quote: true
+      - name: date_end
         data_type: timestamp
         quote: true
-      - name: updated_at
+      - name: date_entered
         data_type: timestamp
         quote: true
-      - name: last_handover_date
-        data_type: string
+      - name: date_modified
+        data_type: timestamp
+        quote: true
+      - name: date_start
+        data_type: timestamp
         quote: true
       - name: description
         data_type: string
         quote: true
-      - name: dp_consent_last_updated
-        data_type: timestamp
-        quote: true
-      - name: eng_level
+      - name: direction
         data_type: string
         quote: true
-      - name: first_call_date
-        data_type: date
+      - name: duration
+        data_type: float64
         quote: true
-      - name: first_call_result
+      - name: call_id
         data_type: string
         quote: true
-      - name: full_lead_name
-        data_type: string
-        quote: true
-      - name: gender
-        data_type: string
-        quote: true
-      - name: guardian_name
-        data_type: string
-        quote: true
-      - name: lead_id
-        data_type: string
-        quote: true
-      - name: last_call_date
-        data_type: string
-        quote: true
-      - name: last_call_result
-        data_type: string
-        quote: true
-      - name: last_call_status
-        data_type: string
-        quote: true
-      - name: last_pt_date
-        data_type: string
-        quote: true
-      - name: last_pt_status
-        data_type: string
-        quote: true
-      - name: lead_source
+      - name: lead_status
         data_type: string
         quote: true
       - name: modified_user_id
         data_type: string
         quote: true
-      - name: lead_segment_group
+      - name: call_title
         data_type: string
         quote: true
-      - name: other_mobile
+      - name: parent_call
         data_type: string
         quote: true
-      - name: last_handover_user_id
+      - name: parent_id
         data_type: string
         quote: true
-      - name: phone_guardian
+      - name: parent_type
         data_type: string
         quote: true
       - name: phone_mobile
         data_type: string
         quote: true
-      - name: potential
+      - name: recall_at
+        data_type: timestamp
+        quote: true
+      - name: recall
+        data_type: int64
+        quote: true
+      - name: recurrence_id
         data_type: string
         quote: true
-      - name: prefer_level
+      - name: recurring_source
         data_type: string
         quote: true
-      - name: primary_address_city
+      - name: reminder_time
         data_type: string
         quote: true
-      - name: primary_address_country
+      - name: repeat_count
         data_type: string
         quote: true
-      - name: primary_address_state
+      - name: repeat_days
         data_type: string
         quote: true
-      - name: primary_address_street
+      - name: repeat_dow
         data_type: string
         quote: true
-      - name: school_id
+      - name: repeat_interval
         data_type: string
         quote: true
-      - name: source_description
+      - name: repeat_ordinal
+        data_type: string
+        quote: true
+      - name: repeat_parent_id
+        data_type: string
+        quote: true
+      - name: repeat_selector
+        data_type: string
+        quote: true
+      - name: repeat_type
+        data_type: string
+        quote: true
+      - name: repeat_unit
+        data_type: string
+        quote: true
+      - name: repeat_until
         data_type: string
         quote: true
       - name: status
         data_type: string
         quote: true
-      - name: target
-        data_type: string
-        quote: true
       - name: center_id
         data_type: string
         quote: true
-      - name: utm_agent_id
-        data_type: string
-        quote: true
-      - name: utm_content
-        data_type: string
-        quote: true
-      - name: utm_medium
-        data_type: string
-        quote: true
-      - name: utm_source
-        data_type: string
+      - name: _batched_at
+        data_type: timestamp
         quote: true

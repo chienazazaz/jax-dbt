@@ -3,5 +3,5 @@
     enabled=false
     )
 }}
-select 
+select *
 from {{ source('dotb', 'tasks') }}

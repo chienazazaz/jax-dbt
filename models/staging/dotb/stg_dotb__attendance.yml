@@ -1,0 +1,130 @@
+version: 2
+models:
+  - name: stg_dotb__attendance
+    columns:
+      - name: absent_for_hour
+        data_type: string
+        quote: true
+      - name: acl_team_set_id
+        data_type: string
+        quote: true
+      - name: assigned_user_id
+        data_type: string
+        quote: true
+      - name: attendance_type
+        data_type: string
+        quote: true
+      - name: attended
+        data_type: int64
+        quote: true
+      - name: care_comment
+        data_type: string
+        quote: true
+      - name: check_in_by_id
+        data_type: string
+        quote: true
+      - name: check_in_id
+        data_type: string
+        quote: true
+      - name: check_in_time
+        data_type: timestamp
+        quote: true
+      - name: check_out_by_id
+        data_type: string
+        quote: true
+      - name: check_out_id
+        data_type: string
+        quote: true
+      - name: check_out_time
+        data_type: timestamp
+        quote: true
+      - name: class_id
+        data_type: string
+        quote: true
+      - name: created_by
+        data_type: string
+        quote: true
+      - name: customer_comment
+        data_type: string
+        quote: true
+      - name: date_entered
+        data_type: timestamp
+        quote: true
+      - name: date_input
+        data_type: timestamp
+        quote: true
+      - name: date_modified
+        data_type: timestamp
+        quote: true
+      - name: datetime_notify_sent
+        data_type: timestamp
+        quote: true
+      - name: description
+        data_type: string
+        quote: true
+      - name: flipped
+        data_type: string
+        quote: true
+      - name: homework
+        data_type: string
+        quote: true
+      - name: homework_comment
+        data_type: string
+        quote: true
+      - name: homework_num
+        data_type: int64
+        quote: true
+      - name: homework_score
+        data_type: float64
+        quote: true
+      - name: attendance_id
+        data_type: string
+        quote: true
+      - name: meeting_id
+        data_type: string
+        quote: true
+      - name: modified_user_id
+        data_type: string
+        quote: true
+      - name: name
+        data_type: string
+        quote: true
+      - name: number_of_part
+        data_type: int64
+        quote: true
+      - name: number_of_question
+        data_type: int64
+        quote: true
+      - name: number_of_right
+        data_type: int64
+        quote: true
+      - name: number_of_wrong
+        data_type: int64
+        quote: true
+      - name: star_rating
+        data_type: int64
+        quote: true
+      - name: student_id
+        data_type: string
+        quote: true
+      - name: student_type
+        data_type: string
+        quote: true
+      - name: teacher_comment_num
+        data_type: int64
+        quote: true
+      - name: teacher_comment_num_per
+        data_type: float64
+        quote: true
+      - name: center_id
+        data_type: string
+        quote: true
+      - name: team_set_id
+        data_type: string
+        quote: true
+      - name: total_score
+        data_type: float64
+        quote: true
+      - name: total_time
+        data_type: float64
+        quote: true
