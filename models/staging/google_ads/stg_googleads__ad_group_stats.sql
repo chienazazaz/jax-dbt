@@ -6,6 +6,7 @@
 SELECT
     stats.ad_group_id,
     stats.campaign_id,
+    stats.customer_id as account_id,
     stats.segments_date AS date,
     stats.segments_device AS device,
     stats.segments_ad_network_type AS network_type,

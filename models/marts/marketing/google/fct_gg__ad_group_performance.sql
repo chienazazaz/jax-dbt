@@ -8,6 +8,7 @@ WITH ad_group_stats AS (
     SELECT
         ad_group_id,
         campaign_id,
+        account_id,
         DATE,
         SUM(clicks) clicks,
         SUM(conversions) conversions,
@@ -21,11 +22,12 @@ WITH ad_group_stats AS (
     GROUP BY
         1,
         2,
-        3
+        3,4
 )
 SELECT
     ags.campaign_id,
     ags.ad_group_id,
+    s.account_id,
     ags.date,
     ags.network_type,
     ags.top_impression_percentage,

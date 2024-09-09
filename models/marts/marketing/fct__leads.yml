@@ -1,0 +1,21 @@
+models:
+  - name: fct__leads
+    columns:
+      - name: phone_mobile
+        data_type: string
+        quote: true
+        tests:
+          - not_null
+          - unique
+      - name: lead_id
+        data_type: string
+        quote: true
+      - name: student_id
+        data_type: string
+        quote: true
+      - name: lead_source
+        data_type: string
+        quote: true
+      - name: created_at
+        data_type: timestamp
+        quote: true
