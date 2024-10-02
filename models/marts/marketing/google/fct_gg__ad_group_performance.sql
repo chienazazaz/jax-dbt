@@ -27,7 +27,7 @@ WITH ad_group_stats AS (
 SELECT
     ags.campaign_id,
     ags.ad_group_id,
-    s.account_id,
+    coalesce(ags.account_id,s.account_id) as account_id,
     ags.date,
     ags.network_type,
     ags.top_impression_percentage,

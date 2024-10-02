@@ -52,7 +52,7 @@ FROM
 {{
     dbt_utils.deduplicate(
         relation = 'source', 
-        partition_by= 'center_id', 
+        partition_by= 'call_id', 
         order_by='_batched_at desc'
         )
         }}

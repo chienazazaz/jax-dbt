@@ -7,6 +7,7 @@ SELECT
     stats.ad_group_id,
     stats.segments_date AS date,
     stats.campaign_id,
+    stats.customer_id AS account_id,
     stats.segments_ad_network_type AS network_type,
     stats.metrics_top_impression_percentage AS top_impression_percentage,
     stats.metrics_search_top_impression_share AS search_top_impression_share,
