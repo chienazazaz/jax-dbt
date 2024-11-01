@@ -5,6 +5,7 @@
 
 SELECT
     stats.campaign_id,
+    stats.customer_id as account_id,
     stats.segments_date AS date,
     stats.segments_conversion_action_name AS conversion_name,
     stats.segments_conversion_attribution_event_type AS conversion_attribution_type,

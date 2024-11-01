@@ -6,6 +6,7 @@
 SELECT
     {{ dbt_utils.generate_surrogate_key(['campaign_id','segments_date','segments_device','segments_ad_network_type','segments_slot']) }} AS row_id,
     stats.campaign_id,
+    stats.customer_id as account_id,
     stats.segments_date AS date,
     stats.segments_device AS device,
     stats.segments_ad_network_type AS network_type,

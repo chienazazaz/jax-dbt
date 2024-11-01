@@ -7,6 +7,7 @@ WITH campaign_stats AS (
 
     SELECT
         campaign_id,
+        account_id,
         DATE,
         slot,
         SUM(cost) AS ads_cost,
@@ -19,12 +20,13 @@ WITH campaign_stats AS (
     GROUP BY
         1,
         2,
-        3
+        3,4
 ),
 campaign_conversion_stats AS (
     SELECT
         campaign_id,
         DATE,
+        account_id,
         slot,
         SUM(
             CASE
@@ -55,7 +57,7 @@ campaign_conversion_stats AS (
     GROUP BY
         1,
         2,
-        3
+        3,4
 )
 SELECT
     cs.*,
@@ -67,5 +69,6 @@ FROM
     campaign_stats cs
     LEFT JOIN campaign_conversion_stats ccs
     ON cs.campaign_id = ccs.campaign_id
+    and cs.account_id = ccs.account_id
     AND cs.date = ccs.date
     AND cs.slot = ccs.slot
