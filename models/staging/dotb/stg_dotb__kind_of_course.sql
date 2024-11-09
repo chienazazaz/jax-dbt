@@ -6,7 +6,7 @@
 
 select 
     id as koc_id,
-    c.name as koc_name,
+    k.name as koc_name,
     team_id as center_id,
     kind_of_course,
     k.status as koc_status,

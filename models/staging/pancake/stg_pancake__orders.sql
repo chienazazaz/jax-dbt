@@ -1,6 +1,7 @@
 {{
   config(
     materialized = 'view',
+    enabled= false
     )
 }}
 {% set pancake_order_statuses = {

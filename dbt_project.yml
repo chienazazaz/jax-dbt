@@ -31,8 +31,10 @@ models:
     marts:
       +schema: marketing
       +materialized: table
+      dim_fb__campaigns:
+        +materialized: view
       dim_fb__posts:
-          +enabled: false
+        +enabled: false
       fct_fb__page_impressions_by_age_gender:
         +enabled: false
       fct_fb__page_impressions_by_city:

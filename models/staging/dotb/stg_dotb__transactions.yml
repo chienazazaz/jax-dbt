@@ -17,6 +17,8 @@ models:
       - name: transaction_line_id
         data_type: string
         quote: true
+        tests:
+          - unique
       - name: inv_code
         data_type: string
         quote: true

@@ -1,0 +1,34 @@
+version: 2
+models:
+  - name: fct_fb__revenue_conversions
+    tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - phone_number
+            - ad_id
+            - payment_no
+    columns:
+      - name: phone_number
+        data_type: string
+        quote: true
+      - name: ad_id
+        data_type: string
+        quote: true
+      - name: last_interaction_date
+        data_type: date
+        quote: true
+      - name: transaction_date
+        data_type: date
+        quote: true
+      - name: payment_no
+        data_type: string
+        quote: true
+      - name: ready_to_pt_date
+        data_type: date
+        quote: true
+      - name: converted_date
+        data_type: date
+        quote: true
+      - name: revenue
+        data_type: float64
+        quote: true

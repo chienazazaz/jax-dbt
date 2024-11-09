@@ -99,6 +99,6 @@ p.created_at,
 pd.updated_at,
 p.description as transaction_description,
 pd.transaction_id, 
-pd.transaction_date,
+p.transaction_date,
 from payment_details pd
 left join payment p on pd.transaction_id = p.transaction_id
